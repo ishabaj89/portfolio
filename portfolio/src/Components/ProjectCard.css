@@ -7,6 +7,7 @@
   border-radius: 20px;
   box-shadow: 0 4px 18px rgba(40, 20, 70, 0.12);
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .project-card:hover {
@@ -26,15 +27,6 @@
   color: #29154c;
   font-size: 22px;
   margin: 15px 0 8px;
-}
-
-.project-details {
-  flex-grow: 1;
-}
-
-.project-details p {
-  line-height: 1.5;
-  margin: 8px 0;
 }
 
 .github-btn {
