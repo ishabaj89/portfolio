@@ -1,0 +1,54 @@
+/* Dark background that covers the whole page */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* The white popup box */
+.popup-window {
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 25px;
+  border-radius: 20px;
+  background: white;
+}
+
+.popup-window h1 {
+  color: #29154c;
+  margin-top: 0;
+}
+
+.popup-image {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.popup-window p {
+  line-height: 1.5;
+}
+
+.close-btn {
+  display: block;
+  margin: 15px auto 0;
+  padding: 11px 22px;
+  border: 2px solid #7040b5;
+  border-radius: 10px;
+  background: white;
+  color: #39205f;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background: #eee5ff;
+}

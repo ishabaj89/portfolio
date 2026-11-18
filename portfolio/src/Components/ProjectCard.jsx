@@ -1,50 +1,43 @@
-
+import { useState } from "react";
 import "./ProjectCard.css";
+import PopupWindow from "./PopupWindow";
 
 function ProjectCard(props) {
+  // false = popup is closed when the page loads
+  const [isOpen, setIsOpen] = useState(false);
+
+  const closePopup = () => {
+    setIsOpen(false);
+  };
+
   return (
-    <div className="project-card">
+    <>
+      <div className="project-card" onClick={() => setIsOpen(true)}>
+        <img
+          src={props.screenshot}
+          alt={props.name}
+          className="project-image"
+        />
 
-      <img
-        src={props.screenshot}
-        alt={props.name}
-        className="project-image"
-      />
+        <h2>{props.name}</h2>
 
-      <h2>{props.name}</h2>
-
-      <div className="project-details">
-        <p>
-          <strong>Tech:</strong> {props.tech}
-        </p>
-
-        <p>
-          <strong>About:</strong> {props.description}
-        </p>
-
-        <p>
-          <strong>Learned:</strong> {props.learned}
-        </p>
-
-        <p>
-          <strong>My Role:</strong> {props.role}
-        </p>
-
-        <p>
-          <strong>Challenges:</strong> {props.challenges}
-        </p>
+        <p>Click to see details</p>
       </div>
 
-      <a
-        href={props.github}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="github-btn"
-      >
-      View GitHub →
-      </a>
-
-    </div>
+      {isOpen && (
+        <PopupWindow
+          name={props.name}
+          screenshot={props.screenshot}
+          github={props.github}
+          tech={props.tech}
+          description={props.description}
+          learned={props.learned}
+          role={props.role}
+          challenges={props.challenges}
+          onClick={closePopup}
+        />
+      )}
+    </>
   );
 }
 
