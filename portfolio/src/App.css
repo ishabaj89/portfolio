@@ -112,6 +112,29 @@ button.primary-btn {
   font-size: 16px;
 }
 
+/* Search bar on the Portfolio page */
+.search-bar {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 30px;
+  padding: 12px 18px;
+  border: 2px solid #7040b5;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.search-bar:focus {
+  outline: none;
+  border-color: #4c2386;
+  box-shadow: 0 0 0 3px #e6d7ff;
+}
+
+.no-results {
+  text-align: center;
+  font-weight: bold;
+}
+
 .secondary-btn {
   color: #39205f;
   border: 2px solid #7040b5;
